@@ -533,7 +533,7 @@ class CocoaMQTTReader {
     private var length: UInt = 0
     private var data: [UInt8] = []
     private var multiply = 1
-    private var delegate: CocoaMQTTReaderDelegate
+    private weak var delegate: CocoaMQTTReaderDelegate
     private var timeout = 30000
 
     init(socket: GCDAsyncSocket, delegate: CocoaMQTTReaderDelegate) {
